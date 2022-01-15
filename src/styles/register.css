@@ -1,0 +1,65 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form h1 {
+    color: var(--blue);
+    margin-top: 88px;
+}
+
+form .div-inputs {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 56px;
+}
+
+form label {
+    color: var(--black-purple);
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.label-required {
+    display: flex;
+}
+
+.label-required #required {
+    color: var(--red);
+    font-size: 1.6rem;
+    margin-left: 4px;
+}
+
+form button.yellow {
+    background: var(--yellow);
+    border: 0;
+    border-radius: 12px;
+    width: 445px;
+
+    margin-top: 36px;
+    padding: 18px 0;
+    font-size: 1.8rem;
+
+    font-weight: 500;
+    color: var(--black-purple);
+}
+
+form button.yellow:hover {
+    background: var(--yellow-hover);
+    cursor: pointer;
+}
+
+label.sign-up {
+    margin-top: 24px;
+    color: var(--blue);
+}
+
+label.sign-up:hover {
+    color: var(--blue-hover);
+    cursor: pointer;
+}
+

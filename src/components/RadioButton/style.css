@@ -1,0 +1,20 @@
+.label-radio {
+    display: block;
+    position: relative;
+    color: var(--black-purple);
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.label-radio input {
+    position: absolute;
+    background: var(--white);
+    border: 1px solid var(--gray-3);
+    border-radius: 50%;
+ 
+    cursor: pointer;
+}
+
+.label-radio input:hover {
+    border-color: var(--blue);
+}

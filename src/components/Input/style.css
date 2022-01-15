@@ -1,0 +1,31 @@
+label {
+    color: var(--black-purple);
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.label-required {
+    display: flex;
+}
+
+.label-required #required {
+    color: var(--red);
+    font-size: 1.6rem;
+    margin-left: 4px;
+}
+
+input {
+    width: 445px;
+    background: var(--white);
+    color: var(--black-purple);
+    border: 1px solid var(--gray-4);
+    border-radius: 12px;
+    padding: 18px;
+
+    margin-bottom: 28px;
+}
+
+input:hover {
+    border-color: var(--blue);
+}
