@@ -5,6 +5,7 @@ import './styles/global.css';
 
 import { Login }  from "./pages/Login";
 import { Register } from "./pages/Register";
+import { RegisterAluno } from "./pages/RegisterAluno";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" exact element={<Login />} />
         <Route path="/register" exact element={<Register />} />
+        <Route path="/registerAluno" exact element={<RegisterAluno />} />
       </Routes>
     </Router>
   );

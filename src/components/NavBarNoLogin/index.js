@@ -7,7 +7,7 @@ import './style.css';
 export default function NavBar() {
     return (
         <nav className="container">
-            <img className="logo" src={logo} alt="Be The Hero" />
+            <img className="logo" src={logo} alt="Dory" />
 
             <div className="nav-buttons">
                 <button className="default">Entrar</button>

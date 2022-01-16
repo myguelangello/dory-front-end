@@ -1,0 +1,73 @@
+nav.container {
+    background: var(--blue);
+
+    height: 96px;
+
+    display: flex;
+    align-items: center;
+    /*justify-content: space-between;*/
+}
+
+nav.container .logo {
+    height: 48px;
+}
+
+nav.container .quick-access {
+    margin-left: 24px;
+}
+
+nav.container .access {
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-right: 16px;
+}
+
+nav.container .search  {
+    margin-left: 145px;
+}
+
+nav.container .search .search-icon {
+    height: 16px;
+}
+
+nav.container .search hr {
+    border: 1px solid var(--white);
+    width: 255px;
+}
+
+nav.container .user-access {
+    display: flex;
+    flex-direction: row;
+
+    margin-left: 246px;
+}
+
+nav.container .user-access .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+nav.container .user-access .item .circle-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 41px;
+    height: 41px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+
+    margin-bottom: 8px;
+}
+
+nav.container .user-access .item .circle-img .solicitacoes-icon {
+    height: 16px;
+}
+
+nav.container .user-access .item .circle-img .perfil-icon {
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+}

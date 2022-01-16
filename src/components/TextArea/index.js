@@ -2,16 +2,17 @@ import React from "react";
 
 import './style.css';
 
-export default function Input(props) {
+export default function TextArea(props) {
     return (
         <div>
             <div className="label-required">
                 <label for={props.name}>{props.question}</label>
                 <label id="required">*</label>
             </div>
-            <input
+            <textarea
                 id={props.name}
-                type={props.type}
+                rows="6"
+                cols="40"
                 placeholder= {props.placeholder}
             />
         </div>
