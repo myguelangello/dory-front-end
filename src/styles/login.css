@@ -1,77 +1,30 @@
-nav.container {
-    background: var(--blue);
-
-    height: 96px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-nav.container img {
-    height: 48px;
-}
-
-nav.container button.default {
-    background: var(--blue);
-    border: 1px solid var(--white);
-    border-radius: 8px;
-
-    padding: 16px 42px;
-
-    font-weight: 500;
-    color: var(--white);
-}
-
-nav.container button.default:hover {
-    border-color: var(--yellow-hover);
-    cursor: pointer;
-}
-
-nav.container button.yellow {
-    background: var(--yellow);
-    border: 0;
-    border-radius: 8px;
-
-    padding: 16px 36px;
-    margin-left: 12px;
-
-    font-weight: 500;
-    color: var(--black-purple);
-}
-
-nav.container button.yellow:hover {
-    background: var(--yellow-hover);
-    cursor: pointer;
-}
-
-form {
+#login form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-form h1 {
+#login form h1 {
     color: var(--blue);
-    margin-top: 88px;
+    margin-top: 64px;
 }
 
-form .div-inputs {
+#login form .div-inputs {
     display: flex;
     flex-direction: column;
 
     margin-top: 56px;
 }
 
-form  label {
+#login form  label {
     color: var(--black-purple);
     font-size: 1.8rem;
     font-weight: 500;
     margin-bottom: 12px;
 }
 
-input {
+#login input {
     width: 445px;
     background: var(--white);
     color: var(--black-purple);
@@ -82,11 +35,36 @@ input {
     margin-bottom: 28px;
 }
 
-input:hover {
+#login input:hover {
     border-color: var(--blue);
 }
 
-form button.yellow {
+#login .label-required {
+    display: flex;
+}
+
+#login .label-required #required {
+    color: var(--red);
+    font-size: 1.6rem;
+    margin-left: 4px;
+}
+
+#login .div-forgot-password {
+    display: flex;
+    justify-content: space-between;
+}
+
+#login .div-forgot-password #forgot-password {
+    color: var(--blue);
+    font-size: 1.6rem;
+}
+
+#login .div-forgot-password #forgot-password:hover {
+    color: var(--blue-hover);
+    cursor: pointer;
+}
+
+#login form button.yellow {
     background: var(--yellow);
     border: 0;
     border-radius: 12px;
@@ -100,32 +78,17 @@ form button.yellow {
     color: var(--black-purple);
 }
 
-form button.yellow:hover {
+#login form button.yellow:hover {
     background: var(--yellow-hover);
     cursor: pointer;
 }
 
-.div-forgot-password {
-    display: flex;
-    justify-content: space-between;
-}
-
-.div-forgot-password #forgot-password {
-    color: var(--blue);
-    font-size: 1.6rem;
-}
-
-.div-forgot-password #forgot-password:hover {
-    color: var(--blue-hover);
-    cursor: pointer;
-}
-
-label.sign-up {
+#login label.sign-up {
     margin-top: 24px;
     color: var(--blue);
 }
 
-label.sign-up:hover {
+#login label.sign-up:hover {
     color: var(--blue-hover);
     cursor: pointer;
 }

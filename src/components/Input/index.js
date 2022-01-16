@@ -7,7 +7,7 @@ export default function Input(props) {
         <div>
             <div className="label-required">
                 <label for={props.name}>{props.question}</label>
-                <label id="required">*</label>
+                <label id={props.required}>*</label>
             </div>
             <input
                 id={props.name}

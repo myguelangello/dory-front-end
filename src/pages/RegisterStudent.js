@@ -6,14 +6,14 @@ import TextArea from "../components/TextArea";
 
 import add from './../assets/icons/add.svg';
 
-import '../styles/registerAluno.css';
+import '../styles/registerStudent.css';
 
-export function RegisterAluno() {
+export function RegisterStudent() {
     return (
-        <div className="content">
+        <div>
             <NavBarGlobal />
 
-            <section className="container">
+            <section className="container" id="register-student">
                 <form onSubmit={() => {}}>
                     <h1>Identificação</h1>
 

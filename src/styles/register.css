@@ -1,40 +1,40 @@
-form {
+#register form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-form h1 {
+#register form h1 {
     color: var(--blue);
-    margin-top: 88px;
+    margin-top: 64px;
 }
 
-form .div-inputs {
+#register form .div-inputs {
     display: flex;
     flex-direction: column;
 
     margin-top: 56px;
 }
 
-form label {
+#register form label {
     color: var(--black-purple);
     font-size: 1.8rem;
     font-weight: 500;
     margin-bottom: 12px;
 }
 
-.label-required {
+#register .label-required {
     display: flex;
 }
 
-.label-required #required {
+#register .label-required #required {
     color: var(--red);
     font-size: 1.6rem;
     margin-left: 4px;
 }
 
-form button.yellow {
+#register form button.yellow {
     background: var(--yellow);
     border: 0;
     border-radius: 12px;
@@ -48,18 +48,17 @@ form button.yellow {
     color: var(--black-purple);
 }
 
-form button.yellow:hover {
+#register form button.yellow:hover {
     background: var(--yellow-hover);
     cursor: pointer;
 }
 
-label.sign-up {
+#register label.sign-up {
     margin-top: 24px;
     color: var(--blue);
 }
 
-label.sign-up:hover {
+#register label.sign-up:hover {
     color: var(--blue-hover);
     cursor: pointer;
 }
-
