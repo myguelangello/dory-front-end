@@ -61,7 +61,7 @@ export function RegisterStudent1() {
                         </button>
 
                         <button className="yellow" type="submit">
-                            Continuar
+                            Salvar
                         </button> 
                     </div>
                 </form>

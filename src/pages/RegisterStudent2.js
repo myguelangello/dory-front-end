@@ -19,7 +19,7 @@ export function RegisterStudent2() {
 
             <section className="container" id="register-student">
                 <form onSubmit={() => {}}>
-                    <h1>Identificação</h1>
+                    <h1>Sobre o seu TCC</h1>
                         <div className="columns-inputs">
                             <div className="div-inputs">
                                 <TextArea

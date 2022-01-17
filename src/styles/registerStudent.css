@@ -22,11 +22,25 @@
     height: 328px;
 }
 
+#register-student form .columns-inputs #line-page-1-1 {
+    border: 0.5px solid var(--gray-5);
+    margin: 0 56px;
+    margin-top: 56px; 
+    height: 580px;
+}
+
 #register-student form .columns-inputs #line-page-2 {
     border: 0.5px solid var(--gray-5);
     margin: 0 56px;
     margin-top: 56px; 
     height: 472px;
+}
+
+#register-student form .columns-inputs #line-page-2-1 {
+    border: 0.5px solid var(--gray-5);
+    margin: 0 56px;
+    margin-top: 56px; 
+    height: 264px;
 }
 
 #register-student form .div-inputs {
