@@ -1,75 +1,128 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import NavBar from "../components/NavBarNoLogin";
-import Input from "../components/Input";
-import RadioButton from "../components/RadioButton";
+import api from '../services/api';
+
+import NavBar from '../components/NavBarNoLogin';
+import Input from '../components/Input';
+import RadioButton from '../components/RadioButton';
 
 import '../styles/register.css';
 
 export function Register() {
-    const [email, setEmail] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [role, setRole] = useState('');
 
-    async function handleLogin(e) {
-        e.preventDefault();
+  async function handleLogin(e) {
+    e.preventDefault();
+
+    if (role === 'Aluno') {
+      setRole('student');
+    } else if (role === 'Professor') {
+      setRole('teacher');
     }
 
-    return (
-        <div className="content">
-            <NavBar />
+    const data = {
+      firstName,
+      lastName,
+      email,
+      password,
+      role,
+    };
 
-            <section className="container">
-            <form onSubmit={handleLogin}>
-                <h1>Crie sua conta</h1>
+    const response = await api.post('/auth/signup', data);
 
-                <div className="div-inputs">
-                    <Input
-                        name="Nome"
-                        type="text"
-                        placeholder="Ex: Alissa"
-                    />
+    if (response.status === 201) {
+      //limpando todos os campos
+      setEmail('');
+      setFirstName('');
+      setLastName('');
+      setPassword('');
+      setRole('');
+      window.location.href = '/registerAluno';
+    } else {
+      console.log(response.data);
+    }
 
-                    <Input
-                        name="Sobrenome"
-                        type="text"
-                        placeholder="Ex: Fernandes"
-                    />
+    //limpando campo
+    setRole('');
+  }
 
-                    <Input
-                        name="Email"
-                        type="text"
-                        placeholder="Ex: alifernandes@gmail.com"
-                    />
+  return (
+    <div className="content">
+      <NavBar />
 
-                    <Input
-                        name="Senha"
-                        type="password"
-                        placeholder="Não escreva 123"
-                    />
+      <section className="container">
+        <form onSubmit={handleLogin}>
+          <h1>Crie sua conta</h1>
 
-                    <div className="label-required">
-                        <label for="perfil">Qual é seu perfil?</label>
-                        <label id="required">*</label>
-                    </div>
-                    <div>
-                        <RadioButton 
-                            name="Aluno"
-                        />
-                        <RadioButton 
-                            name="Professor"
-                        />
-                    </div>
-                    
-                </div>
+          <div className="div-inputs">
+            <Input
+              name="firstName"
+              type="text"
+              placeholder="Ex: Alissa"
+              question="Nome"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              required
+            />
+            <Input
+              name="lastName"
+              type="text"
+              placeholder="Ex: Fernandes"
+              question="Sobrenome"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              required
+            />
+            <Input
+              name="email"
+              type="email"
+              placeholder="Ex: alifernandes@gmail.com"
+              question="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <Input
+              name="password"
+              type="password"
+              placeholder="Não escreva 123"
+              question={'Password'}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <div className="label-required">
+              <label htmlFor="perfil">Qual é seu perfil?</label>
+              <label id="required">*</label>
+            </div>
+            <div>
+              <RadioButton
+                name="student"
+                value={role}
+                checked={role === 'student'}
+                onChange={(e) => setRole(e.target.value)}
+              />
+              <RadioButton
+                name="teacher"
+                value={role}
+                checked={role === 'teacher'}
+                onChange={(e) => setRole(e.target.value)}
+                questiion="oi"
+              />
+            </div>
+          </div>
 
-                <button className="yellow" type="submit">
-                    Criar minha conta
-                </button>
+          <button className="yellow" type="submit" onClick={handleLogin}>
+            Criar minha conta
+          </button>
 
-                <label className="sign-up">Já tenho conta</label>
-            </form>
-        </section>
-        </div>
-    )
-       
-       
+          <label className="sign-up">Já tenho conta</label>
+        </form>
+      </section>
+    </div>
+  );
 }
