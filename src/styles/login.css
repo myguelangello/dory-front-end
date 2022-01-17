@@ -39,6 +39,10 @@
     border-color: var(--blue);
 }
 
+#login input.has-error {
+    border-color: var(--red);
+}
+
 #login .label-required {
     display: flex;
 }
@@ -83,12 +87,15 @@
     cursor: pointer;
 }
 
-#login label.sign-up {
-    margin-top: 24px;
+#login .sign-up {
     color: var(--blue);
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 24px;
+    margin-bottom: 12px;
 }
 
-#login label.sign-up:hover {
+#login .sign-up:hover {
     color: var(--blue-hover);
     cursor: pointer;
 }

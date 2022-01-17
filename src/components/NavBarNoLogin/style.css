@@ -12,7 +12,7 @@ nav.container img {
     height: 48px;
 }
 
-nav.container button.default {
+nav.container .default {
     background: var(--blue);
     border: 1px solid var(--white);
     border-radius: 8px;
@@ -23,12 +23,12 @@ nav.container button.default {
     color: var(--white);
 }
 
-nav.container button.default:hover {
+nav.container .default:hover {
     border-color: var(--yellow-hover);
     cursor: pointer;
 }
 
-nav.container button.yellow {
+nav.container .yellow {
     background: var(--yellow);
     border: 0;
     border-radius: 8px;
@@ -40,7 +40,7 @@ nav.container button.yellow {
     color: var(--black-purple);
 }
 
-nav.container button.yellow:hover {
+nav.container .yellow:hover {
     background: var(--yellow-hover);
     cursor: pointer;
 }

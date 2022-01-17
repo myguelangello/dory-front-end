@@ -2,18 +2,18 @@ import React from "react";
 
 import './style.css';
 
-export default function Input(props) {
+export default function Input({ className, required, name, question, type, placeholder}) {
     return (
         <div>
             <div className="label-required">
-                <label for={props.name}>{props.question}</label>
-                <label id={props.required}>*</label>
+                <label for={name}>{question}</label>
+                <label id={required}>*</label>
             </div>
             <input
-                className="inputText"
-                id={props.name}
-                type={props.type}
-                placeholder= {props.placeholder}
+                className={className}
+                id={name}
+                type={type}
+                placeholder= {placeholder}
             />
         </div>
     )

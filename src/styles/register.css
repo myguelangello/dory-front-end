@@ -53,12 +53,15 @@
     cursor: pointer;
 }
 
-#register label.sign-up {
-    margin-top: 24px;
+#register .sign-up {
     color: var(--blue);
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 24px;
+    margin-bottom: 12px;
 }
 
-#register label.sign-up:hover {
+#register .sign-up:hover {
     color: var(--blue-hover);
     cursor: pointer;
 }

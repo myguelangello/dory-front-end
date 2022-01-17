@@ -29,3 +29,7 @@ label {
 .inputText:hover {
     border-color: var(--blue);
 }
+
+.inputText.has-error {
+    border-color: var(--red);
+}

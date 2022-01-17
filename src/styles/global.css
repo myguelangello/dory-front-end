@@ -52,3 +52,9 @@ h1 {
     padding: 0 165px;
     max-width: 1440px;
 }   
+
+.error {
+    color: var(--red);
+    margin-top: -16px;
+    margin-bottom: 16px;
+}

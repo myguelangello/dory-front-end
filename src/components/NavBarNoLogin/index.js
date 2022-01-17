@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import logo from '../../assets/logo-negativa.svg';
 
@@ -10,8 +11,8 @@ export default function NavBar() {
             <img className="logo" src={logo} alt="Dory" />
 
             <div className="nav-buttons">
-                <button className="default">Entrar</button>
-                <button className="yellow">Criar conta</button>
+                <Link to="/" className="default">Entrar</Link>
+                <Link to="/register" className="yellow">Criar conta</Link>
             </div>
         </nav>
     )
