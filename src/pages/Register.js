@@ -54,13 +54,14 @@ export function Register() {
                         </div>
                         <div>
                             <RadioButton 
-                                name="Aluno"
+                                name="aluno"
+                                question="Aluno"
                             />
                             <RadioButton 
-                                name="Professor"
+                                name="professor"
+                                question="Professor"
                             />
                         </div>
-                        
                     </div>
 
                     <button className="yellow" type="submit">

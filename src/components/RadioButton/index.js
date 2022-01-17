@@ -4,15 +4,18 @@ import './style.css';
 
 export default function RadioButton(props) {
     return (
-        <label className="label-radio">
+        <div className="content">
             <input
+                className="radio"
                 id={props.name}
                 type="radio"
                 value={props.name}
                 checked={() => {}}
                 onChange={() => {}}
-            /> 
-           {props.name}
-        </label>
+            />  
+            <label className="label-radio">
+                {props.question}
+            </label>
+        </div>
     )
 }

@@ -17,7 +17,7 @@
     margin-top: 56px;
 }
 
-#register form label {
+#register form .label-required label {
     color: var(--black-purple);
     font-size: 1.8rem;
     font-weight: 500;

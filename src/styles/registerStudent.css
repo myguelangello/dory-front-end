@@ -15,11 +15,18 @@
     flex-direction: row;
 }
 
-#register-student form .columns-inputs hr {
+#register-student form .columns-inputs #line-page-1 {
     border: 0.5px solid var(--gray-5);
     margin: 0 56px;
     margin-top: 56px; 
     height: 328px;
+}
+
+#register-student form .columns-inputs #line-page-2 {
+    border: 0.5px solid var(--gray-5);
+    margin: 0 56px;
+    margin-top: 56px; 
+    height: 472px;
 }
 
 #register-student form .div-inputs {
@@ -137,4 +144,17 @@
 #register-student form button.default:hover {
     border-color: var(--yellow-hover);
     cursor: pointer;
+}
+
+#register-student .div-inputs #nao-sei {
+    margin-bottom: 28px;
+    margin-top: -12px;
+}
+
+#register-student .question-checkbox {
+    margin-bottom: 10px;
+}
+
+#register-student .list-checkbox {
+    margin-bottom: 28px;
 }

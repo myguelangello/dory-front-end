@@ -9,6 +9,7 @@ export default function TextArea(props) {
                 <label for={props.name}>{props.question}</label>
                 <label id="required">*</label>
             </div>
+            <p className={props.subtitleRequired}>{props.subtitle}</p>
             <textarea
                 id={props.name}
                 rows="6"

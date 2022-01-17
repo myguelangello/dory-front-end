@@ -1,20 +1,36 @@
-.label-radio {
-    display: block;
-    position: relative;
-    color: var(--black-purple);
-    font-size: 1.6rem;
-    font-weight: 400;
+.content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
 }
 
-.label-radio input {
-    position: absolute;
+.label-radio {
+    cursor: pointer;
+
+    color: var(--gray-1);
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    margin-left: 10px;
+}
+
+.radio {
+    cursor: pointer;
+    height: 22px;
+    width: 22px;
+
     background: var(--white);
     border: 1px solid var(--gray-3);
     border-radius: 50%;
- 
-    cursor: pointer;
+
+    margin-bottom: 8px;
 }
 
-.label-radio input:hover {
+.radio:hover {
     border-color: var(--blue);
 }

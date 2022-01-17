@@ -15,7 +15,7 @@ label {
     margin-left: 4px;
 }
 
-input {
+.inputText {
     width: 445px;
     background: var(--white);
     color: var(--black-purple);
@@ -26,6 +26,6 @@ input {
     margin-bottom: 28px;
 }
 
-input:hover {
+.inputText:hover {
     border-color: var(--blue);
 }

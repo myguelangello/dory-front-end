@@ -10,6 +10,7 @@ export default function Input(props) {
                 <label id={props.required}>*</label>
             </div>
             <input
+                className="inputText"
                 id={props.name}
                 type={props.type}
                 placeholder= {props.placeholder}
