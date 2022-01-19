@@ -1,17 +1,33 @@
 import React, { useState } from "react";
+import Modal from 'react-modal';
 
 import NavBarGlobal from "../components/NavBarGlobal";
-import Input from "../components/Input";
 import TextArea from "../components/TextArea";
+import ButtonModal from "../components/ButtonModal";
 
 import add from './../assets/icons/add.svg';
 
 import '../styles/registerStudent.css';
 
+Modal.setAppElement('#root');
+
 export function RegisterStudent1() {
-    const [page, setPage] = useState(1);
-    const handleChange = (e, value) => {
-        setPage(value);
+    const [modalInteresses, setModalInteresses] = useState(false);
+
+    const handleCloseModalInteresses = () => setModalInteresses(false);
+    const handleOpenModalInteresses = () => setModalInteresses(true);
+
+    const onSubmit = (e) => e.preventDefault();
+
+    const customStyles = {
+        content: {
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)'
+        }
     }
 
     return (
@@ -19,7 +35,7 @@ export function RegisterStudent1() {
             <NavBarGlobal />
 
             <section className="container" id="register-student">
-                <form onSubmit={() => {}}>
+                <form onSubmit={onSubmit}>
                     <h1>Identificação</h1>
                         <div className="columns-inputs">
                             <div className="div-inputs perfil">
@@ -45,13 +61,35 @@ export function RegisterStudent1() {
                                     placeholder="Ex: Sou apaixonada por design.."
                                 />
 
-                                <Input
+                                <ButtonModal
                                     name="Interesses"
                                     question="Quais são seus interesses em pesquisa?"
                                     required="required"
-                                    type="text"
+                                    className="buttonModal"
                                     placeholder="+ Adicionar área de interesse"
+                                    onClick={handleOpenModalInteresses}
                                 />
+
+                                <Modal
+                                    isOpen={modalInteresses}
+                                    onRequestClose={handleCloseModalInteresses}
+                                    style={customStyles}
+                                >
+                                    <div className="modal-container">
+                                        <div className="modal-header"> 
+                                            <p>Adicionar suas áreas de interesses</p>
+                                            <p>X</p>
+                                        </div>
+                                        <hr />
+                                        <input 
+                                            name="interesses"
+                                            type="text"
+                                            placeholder="Ex: Design"
+                                        />
+                                        <button onClick={handleCloseModalInteresses}>Close</button>
+                                    </div>
+                                </Modal>
+
                             </div>
                         </div>
                                                     

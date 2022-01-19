@@ -1,72 +1,44 @@
 import React, { useState } from "react";
-import Modal from "react-modal";
-
 import NavBarGlobal from "../components/NavBarGlobal";
 import RadioButton from "../components/RadioButton";
-import Input from "../components/Input";
+import ButtonModal from "../components/ButtonModal";
 
 import '../styles/registerStudent.css';
 
-Modal.setAppElement('#root');
-
 export function RegisterTeacher2() {
-    const [modalIsOpen, setIsOpen] = useState(false);
+    const [modalAreasPesquisa, setModalAreasPesquisa] = useState(false);
 
+    const handleCloseModalAreasPesquisa = () => setModalAreasPesquisa(false);
+    const handleOpenModalAreasPesquisa = () => setModalAreasPesquisa(true);
 
-    function handleOpenModal() {
-        setIsOpen(true);
-    }
-
-    function handleCloseModal() {
-        setIsOpen(false);
-    }
-
-    const customStyles = {
-        content: {
-            top: '50%',
-            left: '50%',
-            right: 'auto',
-            bottom: 'auto',
-            marginRight: '-50%',
-            transform: 'translate(-50%, -50%)'
-        }
-    }
+    const onSubmit = (e) => e.preventDefault();
 
     return (
         <div>
             <NavBarGlobal />
 
             <section className="container" id="register-student">
-            <button className="modal-button" onClick={handleOpenModal}>
-                                    Modal
-                                </button>
-                                <Modal
-                                    isOpen={modalIsOpen}
-                                    onRequestClose={handleCloseModal}
-                                    style={customStyles}
-                                >
-                                    <h2>Hello</h2>
-                                    <button onClick={handleCloseModal}>Close</button>
-                                </Modal>
-                <form onSubmit={() => {}}>
+                <form onSubmit={onSubmit}>
                     <h1>Sobre pesquisa</h1>
                         <div className="columns-inputs">
                             <div className="div-inputs">
                                 
-                                <Input
+                                <ButtonModal
                                     name="areas-pesquisa"
                                     question="Quais são suas áreas de pesquisa?"
                                     required="required"
-                                    type="text"
+                                    className="buttonModal"
                                     placeholder="+ Adicionar área de pesquisa"
+                                    onClick={handleOpenModalAreasPesquisa}
                                 />
-
-                                <Input
+                                
+                                <ButtonModal
                                     name="projetos-pesquisa"
                                     question="Quais projetos de pesquisa você participa?"
                                     required="required"
-                                    type="text"
+                                    className="buttonModal"
                                     placeholder="+ Adicionar projeto de pesquisa"
+                                    onClick={() => {}}
                                 />
 
                                 <div id="nao-sei">
@@ -80,12 +52,13 @@ export function RegisterTeacher2() {
                             <hr  id="line-page-2-1" />
 
                             <div className="div-inputs">
-                                <Input
+                                <ButtonModal
                                     name="projetos-extensao"
                                     question="Quais projetos de extensão você participa?"
                                     required="required"
-                                    type="text"
+                                    className="buttonModal"
                                     placeholder="+ Adicionar projeto de extensão"
+                                    onClick={() => {}}
                                 />
                                 <div id="nao-sei">
                                     <RadioButton
@@ -94,12 +67,13 @@ export function RegisterTeacher2() {
                                     />
                                 </div>
 
-                                <Input
+                                <ButtonModal
                                     name="disciplinas"
                                     question="Quais disciplinas do SMD você leciona?"
                                     required="required"
-                                    type="text"
+                                    className="buttonModal"
                                     placeholder="+ Adicionar disciplinas do SMD"
+                                    onClick={() => {}}
                                 />
                             </div>
                         </div>
