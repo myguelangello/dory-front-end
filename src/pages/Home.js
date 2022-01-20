@@ -110,37 +110,39 @@ export function Home() {
                 </div>
 
                 <div className="resultados-container">
-                    <div className="item-resultado">
-                        <h1>{interesses[0]}</h1>
+                    {interesses.map((inter, index) => (
+                        <div key={index} className="item-resultado">
+                            <h1>{inter}</h1>
 
-                        <div className="nav-filtros">
-                            <div className="filtros"> 
-                                <ButtonNav 
-                                    setStatus={handleSetProfessores}
-                                    name="Professores"
-                                    id={professores ? "selected" : null}
-                                />
+                            <div className="nav-filtros">
+                                <div className="filtros"> 
+                                    <ButtonNav 
+                                        setStatus={handleSetProfessores}
+                                        name="Professores"
+                                        id={professores ? "selected" : null}
+                                    />
 
-                                <ButtonNav 
-                                    setStatus={handleSetTCCs}
-                                    name="TCCs"
-                                    id={TCCs ? "selected" : null}
-                                />
+                                    <ButtonNav 
+                                        setStatus={handleSetTCCs}
+                                        name="TCCs"
+                                        id={TCCs ? "selected" : null}
+                                    />
+                                </div>
+                                
+                                <hr className="line" /> 
                             </div>
-                            
-                            <hr className="line" /> 
+
+                            <MenuProfessores 
+                                status={professores}
+                                professores={listProfessores}
+                            />
+
+                            <MenuTCCs 
+                                status={TCCs}
+                                TCCs={listTCCs}
+                            />
                         </div>
-
-                        <MenuProfessores 
-                            status={professores}
-                            professores={listProfessores}
-                        />
-
-                        <MenuTCCs 
-                            status={TCCs}
-                            TCCs={listTCCs}
-                        />
-                    </div>
+                    ))}
                 </div>
             </section>
         </div>

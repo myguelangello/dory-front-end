@@ -54,6 +54,8 @@
 #home .resultados-container .item-resultado {
     display: flex;
     flex-direction: column;
+
+    margin-bottom: 36px;
 }
 
 #home .resultados-container .item-resultado h1 {
