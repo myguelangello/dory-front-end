@@ -12,7 +12,7 @@ import '../styles/home.css';
 
 export function Home() {
     const [professores, setProfessores] = useState(true);
-    const [alunos, setAlunos] = useState(false);
+    const [TCCs, setTCCs] = useState(false);
 
     const srcPerfil = "https://images.pexels.com/photos/7163364/pexels-photo-7163364.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
 
@@ -22,14 +22,14 @@ export function Home() {
 
     const handleSetProfessores = () => {
         setProfessores(true);
-        setAlunos(false)
+        setTCCs(false)
     }
-    const handleSetAlunos = () => {
-        setAlunos(true);
+    const handleSetTCCs = () => {
+        setTCCs(true);
         setProfessores(false);
     } 
 
-    console.log(professores, alunos);
+    console.log(professores, TCCs);
 
     const listProfessores = [
         {
@@ -100,8 +100,8 @@ export function Home() {
                             />
 
                             <ButtonNav 
-                                setStatus={handleSetAlunos}
-                                name="Alunos"
+                                setStatus={handleSetTCCs}
+                                name="TCCs"
                             />
                             <hr /> 
                         </div>
