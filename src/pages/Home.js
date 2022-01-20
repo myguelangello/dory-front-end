@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import NavBarGlobal from "../components/NavBarGlobal";
-import CardProfessor from "../components/CardProfessor";
 import ButtonNav from "../components/ButtonNav";
 import MenuProfessores from "../components/MenuProfessores";
+import MenuTCCs from "../components/MenuTCCs";
 
 import search from '../assets/icons/search-gray.svg';
  
@@ -64,6 +64,27 @@ export function Home() {
         }
     ]
 
+    const listTCCs = [
+        {
+            id: 0,
+            title: "Desenvolvimento de uma personagem para um projeto de jogo digital de terror utilizando a abordagem The Silver Way",
+            aluno: "Douglas Alves da Silva",
+            professor: "Liandro Roger", 
+            areas: [
+                'Design de personagens', 'Cartum', 'Jogos de Terror'
+            ]
+        },
+        {
+            id: 1,
+            title: "Análise de metodologias ágeis como recursos para desenvolvimento de jogos digitais de pequeno escopo",
+            aluno: "Henrique Artur Cordeiro Gomes",
+            professor: "Henrique Barbosa Silva", 
+            areas: [
+                'Metodologias ágeis', 'Jogos', 'Scrum'
+            ] 
+        },
+    ]
+
     return (
         <div>
             <NavBarGlobal />
@@ -91,7 +112,7 @@ export function Home() {
 
                 <div className="resultados-container">
                     <div className="item-resultado">
-                        <h1>{interesses[1]}</h1>
+                        <h1>{interesses[0]}</h1>
 
                         <div className="nav-filtros">
                             <ButtonNav 
@@ -109,6 +130,11 @@ export function Home() {
                         <MenuProfessores 
                             status={professores}
                             professores={listProfessores}
+                        />
+
+                        <MenuTCCs 
+                            status={TCCs}
+                            TCCs={listTCCs}
                         />
                     </div>
                 </div>
