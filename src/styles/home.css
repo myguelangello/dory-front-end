@@ -65,18 +65,13 @@
     margin-top: 18px;
 }
 
-#home .resultados-container .item-resultado .nav-filtros .filtro-geral {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 1.6rem;
-    letter-spacing: 1.5px;
-    margin-right: 16px;
-    color: var(--gray-3);
+#home .resultados-container .item-resultado .nav-filtros  .filtros {
+    display: flex;
 }
 
-#home .resultados-container .item-resultado .nav-filtros hr {
+#home .resultados-container .item-resultado .nav-filtros .line {
     border: 1px solid var(--gray-5);
-    margin-top: 10px;
+    margin: -1px;
 }
 
 #home .resultados-container .item-resultado .cards {
@@ -85,6 +80,15 @@
     flex-direction: row;
 }
 
-#home #selected {
+#home .nav-filtros #selected {
+    font-weight: 500;
     color: var(--blue);
+}
+ 
+#home .nav-filtros hr#selected {
+    border: 1px solid var(--blue);
+    margin-top: 12px;
+    margin-right: 16px;
+    width: 75%;
+    align-self: center;
 }

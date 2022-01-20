@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 import NavBarGlobal from "../components/NavBarGlobal";
 import ButtonNav from "../components/ButtonNav";
@@ -115,16 +114,21 @@ export function Home() {
                         <h1>{interesses[0]}</h1>
 
                         <div className="nav-filtros">
-                            <ButtonNav 
-                                setStatus={handleSetProfessores}
-                                name="Professores"
-                            />
+                            <div className="filtros"> 
+                                <ButtonNav 
+                                    setStatus={handleSetProfessores}
+                                    name="Professores"
+                                    id={professores ? "selected" : null}
+                                />
 
-                            <ButtonNav 
-                                setStatus={handleSetTCCs}
-                                name="TCCs"
-                            />
-                            <hr /> 
+                                <ButtonNav 
+                                    setStatus={handleSetTCCs}
+                                    name="TCCs"
+                                    id={TCCs ? "selected" : null}
+                                />
+                            </div>
+                            
+                            <hr className="line" /> 
                         </div>
 
                         <MenuProfessores 
