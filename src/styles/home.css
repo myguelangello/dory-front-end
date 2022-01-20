@@ -36,6 +36,11 @@
     padding: 16px;
 }
 
+#home .input-container button {
+    cursor: pointer;
+    background: none;
+}
+
 #home .input-container .input-search {
     margin-left: 12px;
     width: 100%;
@@ -78,4 +83,8 @@
     margin-top: 16px;
     display: flex;
     flex-direction: row;
+}
+
+#home #selected {
+    color: var(--blue);
 }

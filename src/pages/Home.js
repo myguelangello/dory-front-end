@@ -1,22 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import NavBarGlobal from "../components/NavBarGlobal";
 import CardProfessor from "../components/CardProfessor";
+import ButtonNav from "../components/ButtonNav";
+import MenuProfessores from "../components/MenuProfessores";
 
 import search from '../assets/icons/search-gray.svg';
  
 import '../styles/home.css';
 
 export function Home() {
+    const [professores, setProfessores] = useState(true);
+    const [alunos, setAlunos] = useState(false);
+
     const srcPerfil = "https://images.pexels.com/photos/7163364/pexels-photo-7163364.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
 
     const interesses = [
         'Jogos', 'Design', 'Criação de personagens', 'Ilustração', 'Desenho' 
     ]
 
-    const Professores = [
+    const handleSetProfessores = () => {
+        setProfessores(true);
+        setAlunos(false)
+    }
+    const handleSetAlunos = () => {
+        setAlunos(true);
+        setProfessores(false);
+    } 
+
+    console.log(professores, alunos);
+
+    const listProfessores = [
         {
+            id: 0,
             foto: srcPerfil,
             nome: "Alysson Diniz",
             email: "alysson@virtual.ufc.br",
@@ -26,6 +43,7 @@ export function Home() {
             status: "disponível" 
         },
         {
+            id: 1,
             foto: srcPerfil,
             nome: "Alysson Diniz",
             email: "alysson@virtual.ufc.br",
@@ -35,6 +53,7 @@ export function Home() {
             status: "disponível" 
         },
         {
+            id: 2,
             foto: srcPerfil,
             nome: "Alysson Diniz",
             email: "alysson@virtual.ufc.br",
@@ -58,7 +77,10 @@ export function Home() {
                 </div>
 
                 <div className="input-container">
-                    <img className="search-icon" src={search} alt="Ícone de pesquisa" />
+                    <button>
+                        <img className="search-icon" src={search} alt="Ícone de pesquisa" />
+                    </button>
+                    
                     <input 
                         className="input-search"
                         name="search"
@@ -72,22 +94,22 @@ export function Home() {
                         <h1>{interesses[1]}</h1>
 
                         <div className="nav-filtros">
-                            <Link to="/home" className="filtro-geral">Professores</Link>
-                            <Link to="/home" className="filtro-geral">TCCs</Link>
+                            <ButtonNav 
+                                setStatus={handleSetProfessores}
+                                name="Professores"
+                            />
+
+                            <ButtonNav 
+                                setStatus={handleSetAlunos}
+                                name="Alunos"
+                            />
                             <hr /> 
                         </div>
 
-                        <div className="cards">
-                            {Professores.map(professor => (
-                                <CardProfessor 
-                                    srcPerfil={professor.foto}
-                                    nome={professor.name}
-                                    email={professor.email}
-                                    areas={professor.areas}
-                                    status={professor.status}
-                                />
-                            ))}
-                        </div>
+                        <MenuProfessores 
+                            status={professores}
+                            professores={listProfessores}
+                        />
                     </div>
                 </div>
             </section>

@@ -2,11 +2,11 @@ import React from "react";
 
 import './style.css';
 
-export default function CardProfessor({ srcPerfil, nome, email, areas, status }) {
+export default function CardProfessor({ idProfessor, srcPerfil, nome, email, areas, status }) {
     const altPerfil = "Foto de perfil de " + nome;
 
     return (
-        <div className="card">
+        <li key={idProfessor} className="card">
             <div className="header">
                 <div className="perfil">
                     <div className="foto-perfil">
@@ -33,6 +33,6 @@ export default function CardProfessor({ srcPerfil, nome, email, areas, status })
             <button className="yellow" type="submit">
                 Ver Perfil
             </button>
-        </div>
+        </li>
     )
 }
