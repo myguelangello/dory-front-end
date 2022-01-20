@@ -8,6 +8,8 @@ import { RegisterStudent2 } from "./pages/RegisterStudent2";
 import { RegisterTeacher1 } from "./pages/RegisterTeacher1";
 import { RegisterTeacher2 } from "./pages/RegisterTeacher2";
 
+import { Home } from "./pages/Home";
+
 function RoutesApp() {
   return (
     <Router>
@@ -20,6 +22,8 @@ function RoutesApp() {
         <Route path="/registerTeacher" element={<RegisterTeacher1 />} />
         <Route path="/registerTeacher/page=1" element={<RegisterTeacher1 />} />
         <Route path="/registerTeacher/page=2" element={<RegisterTeacher2 />} />
+
+        <Route path="/home" element={<Home />} />
       </Routes>
     </Router>
   );

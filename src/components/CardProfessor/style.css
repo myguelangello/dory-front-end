@@ -1,0 +1,119 @@
+.card {
+    border: 1px solid var(--gray-5);
+    border-radius: 12px;
+    padding: 16px;
+    max-width: 305px; /*350*/
+
+    margin-right: 12px;
+}
+
+.cards .perfil {
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+}
+
+.cards .perfil .foto-perfil {
+    width: 64px;
+    height: 64px;
+    border: 1px solid var(--gray-5);
+    border-radius: 50%;
+}
+
+.cards .perfil .foto-perfil img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cards .perfil .status  {
+    width: 24px;
+    height: 24px;
+    background-color: var(--white);
+    border: 1px solid var(--green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+
+    margin-top: -22px;
+}
+
+.cards .perfil .status#disponível {
+    border: 1px solid var(--green);
+}
+
+.cards .perfil .status .bolinha {
+    width: 16px;
+    height: 16px;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
+.cards .perfil .status .bolinha#disponível {
+    background-color: var(--green);
+}
+
+.cards .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cards .header .infos {
+    margin-left: 12px;
+}
+
+.cards .header .infos h2 {
+    color: var(--black-purple);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2.0rem;
+    margin-bottom: 4px;
+}
+
+.cards .header .infos p {
+    color: var(--gray-1);
+    font-size: 1.6rem;
+}
+
+.cards .tags-areas {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: 24px;
+    margin-bottom: 18px;
+}
+
+.cards .tags-areas .tag {
+    background: var(--blue-light);
+    color: var(--black-purple);
+    padding: 10px 12px;
+    border-radius: 36px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    margin-right: 6px;
+}
+
+.yellow {
+    background: var(--yellow);
+    border: 0;
+    border-radius: 12px;
+    width: 270px; /*313*/
+
+    margin-top: 8px;
+    padding: 16px 0;
+    font-size: 1.6rem;
+
+    font-weight: 500;
+    color: var(--black-purple);
+}
+
+.yellow:hover {
+    background: var(--yellow-hover);
+    cursor: pointer;
+}
