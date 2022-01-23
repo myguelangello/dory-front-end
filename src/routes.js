@@ -7,6 +7,7 @@ import { RegisterStudent1 } from "./pages/RegisterStudent1";
 import { RegisterStudent2 } from "./pages/RegisterStudent2";
 import { RegisterTeacher1 } from "./pages/RegisterTeacher1";
 import { RegisterTeacher2 } from "./pages/RegisterTeacher2";
+import { Search } from "./pages/Search";
 
 import { Home } from "./pages/Home";
 
@@ -24,6 +25,7 @@ function RoutesApp() {
         <Route path="/registerTeacher/page=2" element={<RegisterTeacher2 />} />
 
         <Route path="/home" element={<Home />} />
+        <Route path="/search" element={<Search />} />
       </Routes>
     </Router>
   );

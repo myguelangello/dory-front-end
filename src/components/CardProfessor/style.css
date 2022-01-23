@@ -1,26 +1,27 @@
-.card {
+#professor {
     border: 1px solid var(--gray-5);
     border-radius: 12px;
     padding: 16px;
     max-width: 305px; /*350*/
 
-    margin-right: 12px;
+    margin-right: 16px;
+    margin-bottom: 16px;
 }
 
-.cards .perfil {
+#professor .perfil {
     display: flex;
     flex-direction: column;
     width: 70px;
 }
 
-.cards .perfil .foto-perfil {
+#professor .perfil .foto-perfil {
     width: 64px;
     height: 64px;
     border: 1px solid var(--gray-5);
     border-radius: 50%;
 }
 
-.cards .perfil .foto-perfil img {
+#professor .perfil .foto-perfil img {
     width: 64px;
     height: 64px;
     border-radius: 50%;
@@ -28,7 +29,7 @@
     object-position: center;
 }
 
-.cards .perfil .status  {
+#professor .perfil .status  {
     width: 24px;
     height: 24px;
     background-color: var(--white);
@@ -42,32 +43,32 @@
     margin-top: -22px;
 }
 
-.cards .perfil .status#disponível {
+#professor .perfil .status#disponível {
     border: 1px solid var(--green);
 }
 
-.cards .perfil .status .bolinha {
+#professor .perfil .status .bolinha {
     width: 16px;
     height: 16px;
     background-color: var(--white);
     border-radius: 50%;
 }
 
-.cards .perfil .status .bolinha#disponível {
+#professor .perfil .status .bolinha#disponível {
     background-color: var(--green);
 }
 
-.cards .header {
+#professor .header {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.cards .header .infos {
+#professor .header .infos {
     margin-left: 12px;
 }
 
-.cards .header .infos h2 {
+#professor .header .infos h2 {
     color: var(--black-purple);
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -75,12 +76,12 @@
     margin-bottom: 4px;
 }
 
-.cards .header .infos p {
+#professor .header .infos p {
     color: var(--gray-1);
     font-size: 1.6rem;
 }
 
-.cards .tags-areas {
+#professor .tags-areas {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -89,7 +90,7 @@
     margin-bottom: 18px;
 }
 
-.cards .tags-areas .tag {
+#professor .tags-areas .tag {
     background: var(--blue-light);
     color: var(--black-purple);
     padding: 10px 12px;

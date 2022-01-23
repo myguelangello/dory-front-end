@@ -6,7 +6,7 @@ export default function CardProfessor({ idProfessor, srcPerfil, nome, email, are
     const altPerfil = "Foto de perfil de " + nome;
 
     return (
-        <li key={idProfessor} className="card">
+        <li key={idProfessor} className="card" id="professor">
             <div className="header">
                 <div className="perfil">
                     <div className="foto-perfil">
