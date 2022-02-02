@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useForm } from 'react-hook-form';
@@ -10,6 +10,8 @@ import Input from '../components/Input';
 
 import '../styles/login.css';
 import api from '../services/api';
+import { AuthContext } from '../contexts/AuthContext';
+import { parseCookies } from 'nookies';
 
 const schema = yup
   .object({
@@ -31,20 +33,29 @@ export function Login() {
     resolver: yupResolver(schema),
   });
 
+  const { signIn } = useContext(AuthContext);
+
   async function handleLogin(data) {
-    console.log(data);
-
-    const response = await api.post('auth/authenticate', data);
-
-    if (response.status === 200) {
-      //limpando todos os campos
-
-      window.location.href = '/home';
-    } else {
-      console.log(response.data);
-    }
+    await signIn(data);
   }
 
+  const { 'dory.token': token } = parseCookies();
+  // executa o useEffect assim que carregar a pag
+  useEffect(() => {
+    console.log(token);
+
+    if (token) {
+      window.location.href = '/home';
+    }
+  }, []);
+  // executa o useEffect sempre o tokwn mudar
+  useEffect(() => {
+    console.log(token);
+
+    if (token) {
+      window.location.href = '/home';
+    }
+  }, [token]);
   return (
     <div>
       <NavBar />

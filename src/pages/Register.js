@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -10,6 +10,7 @@ import RadioButton from '../components/RadioButton';
 
 import api from '../services/api';
 import '../styles/register.css';
+import { parseCookies } from 'nookies';
 
 const schema = yup
   .object({
@@ -53,6 +54,20 @@ export function Register() {
       console.log(response.data.message);
     }
   }
+
+  const { 'dory.token': token } = parseCookies();
+  // executa o useEffect assim que carregar a pag
+  useEffect(() => {
+    if (token) {
+      window.location.href = '/home';
+    }
+  }, []);
+  // executa o useEffect sempre o tokwn mudar
+  useEffect(() => {
+    if (token) {
+      window.location.href = '/home';
+    }
+  }, [token]);
 
   return (
     <div>
